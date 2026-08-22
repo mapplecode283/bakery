@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS driver_locations (
+    id          VARCHAR(36) PRIMARY KEY,
+    driver_id   VARCHAR(36) NOT NULL REFERENCES drivers(id),
+    latitude    DOUBLE PRECISION NOT NULL,
+    longitude   DOUBLE PRECISION NOT NULL,
+    updated_at  TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

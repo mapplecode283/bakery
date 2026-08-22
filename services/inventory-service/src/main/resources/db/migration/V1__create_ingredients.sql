@@ -1,0 +1,7 @@
+CREATE TABLE ingredients (
+    id          VARCHAR(36) PRIMARY KEY,
+    name        VARCHAR(100) NOT NULL,
+    unit        VARCHAR(20) NOT NULL,
+    min_stock   DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    created_at  TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
